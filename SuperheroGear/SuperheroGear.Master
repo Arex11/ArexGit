@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SuperheroGear.master.cs" Inherits="SuperheroGear.SuperheroGear" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>SUPERHERO GEAR</title>
+    <link rel="stylesheet" href="css/StyleSheet.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div id="wrapper" class="auto-style1">
+            <div id="banner">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/SHGearBanner.jpg" Height="350px" Width="1100px" />
+            </div>
+            <div id="aside3"><asp:DropDownList ID="DpDwnListMyCart" runat="server">
+                <asp:ListItem>MyCart...</asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+                <asp:ListItem></asp:ListItem>
+                </asp:DropDownList></div>
+            <div id="aside"><asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" BackColor="#99CCFF" Font-Bold="True" Font-Underline="True" ForeColor="Black" /></div>
+            <div id="aside2"><asp:Button ID="btnRegisterLogin" runat="server" Text="Register/Login" OnClick="btnRegisterLogin_Click" BackColor="#99CCFF" Font-Bold="True" Font-Underline="True" ForeColor="Black" /></div>
+            <h1>SUPERHERO GEAR</h1>
+            
+            <div id="navigation">
+                <ul id="nav">
+                    <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Pages/index.aspx">Home</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/Gear Shop.aspx">Gear Shop</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Pages/About Us.aspx">About Us</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Pages/Contact Us.aspx">Contact Us</asp:HyperLink></li>
+                </ul>
+
+            </div>
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
